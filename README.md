@@ -14,6 +14,64 @@ The Design Language Interpreter allows designers to create visual elements using
 
 ---
 
+## Installation
+
+To install and use **Design Language**, follow these steps:
+
+### 1. Clone the Repository
+```bash
+git clone <repository-url>
+cd design-language
+```
+
+### 2. Install the Package
+
+For local development, install the package in editable mode:
+```bash
+pip install -e .
+```
+
+### 3. Install Dependencies
+
+Ensure that required dependencies are installed:
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Usage
+
+Once installed, you can use Design Language in the following way:
+
+### 1. Create a Design Code File
+Write your design code in a `.dl` file. For example, create a file named `example.dl` with the following content:
+
+```
+FRAME width=800 height=600 color=#f9f9f9
+    RECTANGLE width=200 height=100 color=blue position=(50, 50) opacity=0.8
+    CIRCLE radius=50 color=red position=(300, 100) opacity=0.6
+    LINE length=400 thickness=5 color=green position=(100, 200)
+    IMAGE url="https://via.placeholder.com/150" width=150 height=150 position=(400, 300)
+    TEXT "Hello, Designers!" size=24 color=black position=(200, 500)
+    GRADIENT width=400 height=100 colors=(red,blue,green) position=(200, 350)
+END
+```
+
+### 2. Run the Interpreter
+Use the command-line interface to generate the HTML output:
+
+```bash
+python src/parser.py example.dl
+```
+
+This will generate an `output.html` file in the current directory.
+
+### 3. View the Output
+Open the `output.html` file in any modern web browser to view your design.
+
+---
+
 ## Syntax Reference
 
 ### Frame
